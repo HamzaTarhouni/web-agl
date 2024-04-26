@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+    <script>
+       function test() {
+
+    nom = document.getElementById('nom').value;
+    email = document.getElementById('email').value;
+    pass = document.getElementById('pass').value;
+
+
+    motifn = new RegExp(/^[a-zA-Z]+$/);
+    motifp = new RegExp(/^(?=.[a-zA-Z])(?=.\d).+$/);
+
+
+    if (nom === ""  email === ""  pass === "") {
+        alert("Tous les champs doivent etre remplis.");
+        return false;
+
+    }
+
+    if (!motifn.test(nom)) {
+        alert("Le nom doit être alphabétique.");
+        return false;
+    }
+
+
+    if (!motifp.test(pass)) {
+        alert("Le mot de passe doit être alphanumérique.");
+        return false;
+
+    }
+
+
+}
+
+    </script>
+</head>
+<body>
+<form action="signup.php" method="post">
+<br></br>
+    <h2>Welcome</h2>
+    <br></br>
+    <label>
+      <span>Nom</span>
+      <input type="name" name="nom" id="nom"/>
+    </label>
+    <br></br>
+    <label>
+      <span>Email</span>
+      <input type="email" name="mail" id="email" />
+    </label>
+    <br></br>
+    <label>
+      <span>Password</span>
+      <input type="password" name="pass" id="pass"/>
+    </label>
+    <br></br>
+    <button type="submit" class="submit" name="signup" onclick="test()">Sign Up</button>
+    </form>
+</body>
+</html>

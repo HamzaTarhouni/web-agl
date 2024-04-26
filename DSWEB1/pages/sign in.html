@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in</title>
+    <script>
+        function test(){
+        email = document.getElementById('email').value;
+        pass= document.getElementById('pass').value;
+
+        if (email === "" || pass === "") {
+        alert("Tous les champs doivent être remplis.");
+        return false;
+        }
+    }
+
+
+
+
+    </script>
+</head>
+<body>
+<form  action="signin.php" method="post">
+<br></br>
+    <h2>Welcome</h2>
+    <br></br>
+    <label>
+      <span>Email</span>
+      <input type="email" name="mail" id="email" />
+    </label>
+    <br></br>
+    <label>
+      <span>Password</span>
+      <input type="password" name="pass" id="pass"/>
+    </label>
+    <label for="">
+
+    </label>
+    <br></br>
+    <button type="submit" class="submit" name="signin" onclick="test()">Sign In</button>
+</form>
+
+</body>
+</html>
